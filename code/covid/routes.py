@@ -1,32 +1,40 @@
 from flask import render_template, url_for, flash, redirect, request
 from covid import app, db, bcrypt
-from covid.forms import RegistrationForm, LoginForm
-from covid.models import User, Post
+from covid.forms import RegistrationForm, LoginForm, ScheduleForm
+from covid.models import User
 from flask_login import login_user, current_user, logout_user, login_required
+from utils import *
+from SEIRmodel.refine_SEIR import SEIR
+import datetime
 
 
-posts = [
-    {
-        'author': 'Corey Schafer',
-        'title': 'Blog Post 1',
-        'content': 'First post content',
-        'date_posted': 'April 20, 2018'
-    },
-    {
-        'author': 'Jane Doe',
-        'title': 'Blog Post 2',
-        'content': 'Second post content',
-        'date_posted': 'April 21, 2018'
-    }
-]
-
-
-@app.route("/")
-@app.route("/home")
+@app.route("/", methods=['GET', 'POST'])
+@app.route("/home", methods=['GET', 'POST'])
 def home():
     if not current_user.is_authenticated:
         return redirect(url_for('login'))
-    return render_template('home.html', posts=posts)
+    form = ScheduleForm()
+    if form.validate_on_submit():
+
+        time = form.time.data
+        location = form.location.data
+
+        covid_num, recovered = province_covid_num(location)
+        population = province_population(location)
+        model = SEIR(population, covid_num, recovered, covid_num, time, risks)
+        result = model.predict()
+        numOfDays = date - presentDate
+        if result[numOfDnumOfDays > 0 && result[numOfDays] - result > 5
+
+        warnings.append("Your trip to " + event[locationIndex] + " on " + date + "may be dangerous")
+
+
+    return render_template('home.html', form=form)
+
+
+@app.route('/result')
+def result():
+    return render_template('result.html')
 
 
 @app.route("/about")

@@ -1,0 +1,955 @@
+{
+  'data': [
+    {
+      'dangerCount': 7,
+      'dangerLevel': 1,
+      'dangerPros': [
+        {
+          'dangerAreas': [
+            {
+              'areaName': '江宁区禄口街道',
+              'cityName': "南京"
+            },
+            {
+              'areaName': '邗江区双桥街道武塘社区文昌西路以南、文汇西路以北、维扬路以西、新城河路以东区域',
+              'cityName': '扬州'
+            }
+          ],
+          'provinceId': '32',
+          'provinceName': '江苏省',
+          'provinceShortName': '江苏'
+        },
+        {
+          'dangerAreas': [
+            {
+              'areaName': '二七区京广路街道',
+              'cityName': '郑州'
+            }
+          ],
+          'provinceId': '41',
+          'provinceName': '河南省',
+          'provinceShortName': '河南'
+        },
+        {
+          'dangerAreas': [
+            {
+              'areaName': '官黎坪街道黄金塔社区',
+              'cityName': '张家界'
+            },
+            {
+              'areaName': '永定区子午路以南、大桥路以西、大庸路以东合围区域',
+              'cityName': '张家界'
+            },
+            {
+              'areaName': '永定区子午路以南、迎宾路以西、澧水河以北、大桥路以东合围区域',
+              'cityName': '张家界'
+            }
+          ],
+          'provinceId': '43',
+          'provinceName': '湖南省',
+          'provinceShortName': '湖南'
+        },
+        {
+          'dangerAreas': [
+            {
+              'areaName': '瑞丽市姐告国门社区',
+              'cityName': '德宏州'
+            }
+          ],
+          'provinceId': '53',
+          'provinceName': '云南省',
+          'provinceShortName': '云南'
+        }
+      ]
+    },
+    {
+      'dangerCount': 198,
+      'dangerLevel': 2,
+      'dangerPros': [
+        {
+          'dangerAreas': [
+            {
+              'areaName': '龙泽园街道龙跃苑二区',
+              'cityName': '昌平区'
+            },
+            {
+              'areaName': '阎村镇乐活家园社区',
+              'cityName': '房山区'
+            }
+          ],
+          'provinceId': '11',
+          'provinceName': '北京市',
+          'provinceShortName': '北京'
+        },
+        {
+          'dangerAreas': [
+            {
+              'areaName': '海拉尔区奋斗镇神宝小区',
+              'cityName': '呼伦贝尔'
+            }
+          ],
+          'provinceId': '15',
+          'provinceName': '内蒙古自治区',
+          'provinceShortName': '内蒙古'
+        },
+        {
+          'dangerAreas': [
+            {
+              'areaName': '甘井子区泉水街道A4区27号楼',
+              'cityName': '大连'
+            }
+          ],
+          'provinceId': '21',
+          'provinceName': '辽宁省',
+          'provinceShortName': '辽宁'
+        },
+        {
+          'dangerAreas': [
+            {
+              'areaName': '川沙新镇华夏二路1500弄心圆西苑小区',
+              'cityName': '浦东新区'
+            }
+          ],
+          'provinceId': '31',
+          'provinceName': '上海市',
+          'provinceShortName': '上海'
+        },
+        {
+          'dangerAreas': [
+            {
+              'areaName': '广陵区东关街道北柳巷 67 号',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区东关街道彩衣街34号',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区东关街道大草小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区东关街道个园社区广储门街 58 号',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区东关街道何园社区丁家湾如来柱（巷）8号',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区东关街道皮市街社区滨河苑小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区广陵经济开发区翠月嘉苑社区翠月花园小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区曲江街道顾庄社区顾庄新村小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区曲江街道曲江新苑社区骏和天城小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区曲江街道施井社区城东路35号',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区曲江街道五里庙社区联发君悦华府',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区曲江街道洼子街社区万花园小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区曲江街道新星社区运河水府小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区曲江街道新星社区运河水庭小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区汤汪乡杉湾花园社区杉湾花园 2 期 13 号楼、14 号楼、15 号楼以南区域',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区汤汪乡杉湾花园社区杉湾花园4期',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区汤汪乡同心村新庄组',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区文峰街道福运门社区渡江南路46号',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区汶河街道皇宫社区皇宫花园小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区汶河街道荷花池社区南门外大街 105 号',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区汶河街道石塔社区淮海路157号大院',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区湾头镇京杭社区运河东郡3期',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区湾头镇京杭社区运河东郡五期',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区湾头镇联合村',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区湾头镇万福社区广福花园小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '广陵区湾头镇万寿村南刘二组',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区汊河街道高桥社区宏溪新苑小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区邗上街道冯庄社区万达茂广场住宅区、五里社区美琪小区、兰庄社区凯莱花园小区、兰庄社区永安公寓',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区邗上街道邗上社区香格里拉小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区邗上街道贾桥社区月亮园小区皓月苑',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区邗上街道兰庄社区国税宿舍',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区邗上街道兰庄社区莱东苑庄台',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区邗上街道兰庄社区兰苑小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区邗上街道兰庄社区永安公寓',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区邗上街道五里社区美琪小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区邗上街道五里社区西城上筑小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区邗上街道五里社区雍华府小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区蒋王街道四联村后庄组',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区上街道兰庄社区凯莱花园小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区双桥街道卜桥社区弘扬花园小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区双桥街道卜桥社区农科所宿舍16庄台',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区双桥街道卜桥社区扬州天下西华苑小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区双桥街道康乐社区武庄小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区双桥街道康乐新村',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区双桥街道柳湖北苑',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区双桥街道念四新村小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区双桥街道双桥社区宰庄小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区双桥街道文扬社区文华苑小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区双桥街道文苑社区新庄二村',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区双桥街道文苑社区新庄新村小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区双桥街道文扬社区中集紫金文昌小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区双桥街道杨庄街坊',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区四望亭路217-5号怡莱酒店（四望亭路店）',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区西湖镇金槐村金槐花园小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区西湖镇俞桥村俞桥组',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区新盛街道新盛社区和美第小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区新盛街道新悦社区华鼎星城小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区新盛街道殷湖社区新盛花苑小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区新盛街道殷巷社区奥都花城小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '邗江区竹西街道竹西社区月明苑小区一期',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '江都区丁沟镇麾南村中心组',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '江都区仙女镇双沟社区双沟供销大楼',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '经济技术开发区施桥镇汪家村仇庄组',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '经济技术开发区文汇街道宝带社区宝带新村（北宝带）',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '经济技术开发区文汇街道南宝带小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '经济技术开发区扬子津街道新河湾社区静安阳光花都小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '经济技术开发区扬子津街道阳光新苑北区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '蜀冈 ~ 瘦西湖风景名胜区梅岭街道漕河社区玉器街 86~1 号',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '蜀冈 ~ 瘦西湖风景名胜区梅岭街道广储社区广储庄台',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '蜀冈 ~ 瘦西湖风景名胜区梅岭街道广储社区史可法路 10 号',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '蜀冈-瘦西湖风景名胜区梅岭街道广储社区梅庄',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '蜀冈-瘦西湖风景名胜区梅岭街道广储社区玉器街28号',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '蜀冈-瘦西湖风景名胜区梅岭街道邗沟社区梅花山庄小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '蜀冈-瘦西湖风景名胜区瘦西湖街道滨湖社区瘦西湖景苑小区',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '生态科技新城泰安镇泰安社区新万福路88号',
+              'cityName': '扬州'
+            },
+            {
+              'areaName': '鼓楼区挹江门街道大桥南路10号',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '江宁区淳化街道新林村郭村自然村',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '江宁区东山街道岔路社区绿城深蓝小区',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '江宁区东山街道骆村社区天琪福苑',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '江宁区湖熟街道钱家村钱家自然村',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '江宁区湖熟街道尚桥社区焦东自然村',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '江宁区湖熟街道周岗社区围合区域（东至集贤路，南至长干街，西至康庄路，北至齐尚街）',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '江宁区湖熟街道周岗社区新风苑',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '江宁区湖熟街道周岗社区庄上自然村',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '江宁区湖熟街道周岗社区张巷自然村',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '江宁区横溪街道宁光村蔡坎自然村',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '江宁区横溪街道许程社区小呈自然村',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '江宁区秣陵街道青源社区翠屏湾花园城',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '江宁区秣陵街道殷巷社区龙湖文馨苑小区',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '江宁区麒麟街道麒麟门社区麒西路95号',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '建邺区莫愁湖街道凤栖苑',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '建邺区南苑街道吉庆家园小区',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '建邺区南苑街道所街26号',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '溧水区永阳街道宏力花苑',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '溧水区永阳街道万科城香樟苑',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '溧水区柘塘街道湖滨新寓',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '秦淮区中华门街道晨光新苑16栋',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '栖霞区迈皋桥街道和燕花苑12幢',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '玄武区孝陵卫街道胜利村100号',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '雨花台区铁心桥街道凤翔新城1期',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '雨花台区铁心桥街道景明佳园小区',
+              'cityName': '南京'
+            },
+            {
+              'areaName': '高良涧街道崔朱社区泽地华城12栋',
+              'cityName': '淮安'
+            },
+            {
+              'areaName': '高良涧街道王庄村13组胡桑田庄台',
+              'cityName': '淮安'
+            },
+            {
+              'areaName': '洪泽区高良涧街道邓码社区邓码安置小区',
+              'cityName': '淮安'
+            },
+            {
+              'areaName': '洪泽区高良涧街道邓码社区鸿盈小区',
+              'cityName': '淮安'
+            },
+            {
+              'areaName': '洪泽区高良涧街道邓码社区永安东路环城蔡上组',
+              'cityName': '淮安'
+            },
+            {
+              'areaName': '洪泽区高良涧街道惠民社区金盛花苑小区',
+              'cityName': '淮安'
+            },
+            {
+              'areaName': '洪泽区高良涧街道洪泽园三村宏盛家园十栋',
+              'cityName': '淮安'
+            },
+            {
+              'areaName': '洪泽区高良涧街道临河社区复兴路128号楼栋',
+              'cityName': '淮安'
+            },
+            {
+              'areaName': '洪泽区高良涧街道杨码社区大庆南路18号院',
+              'cityName': '淮安'
+            },
+            {
+              'areaName': '盱眙县江苏淮河化工有限公司生活区宿舍楼 2 幢',
+              'cityName': '淮安'
+            },
+            {
+              'areaName': '宿豫区陆集街道利民社区陆运河工程船闸项目工地宿舍区',
+              'cityName': '宿迁'
+            },
+            {
+              'areaName': '泗阳县众兴街道西湖社区中华商城小区',
+              'cityName': '宿迁'
+            }
+          ],
+          'provinceId': '32',
+          'provinceName': '江苏省',
+          'provinceShortName': '江苏'
+        },
+        {
+          'dangerAreas': [
+            {
+              'areaName': '思明区莲前街道前埔社区前埔社',
+              'cityName': '厦门'
+            },
+            {
+              'areaName': '思明区莲前街道源泉山庄A区（前埔六里1-20号）',
+              'cityName': '厦门'
+            }
+          ],
+          'provinceId': '35',
+          'provinceName': '福建省',
+          'provinceShortName': '福建'
+        },
+        {
+          'dangerAreas': [
+            {
+              'areaName': '国奥天地小区',
+              'cityName': '烟台'
+            },
+            {
+              'areaName': '海信天山郡小区',
+              'cityName': '烟台'
+            },
+            {
+              'areaName': '开发区黄河路以西、长江路以北、沂河路以东、双美大厦配套路以南区域',
+              'cityName': '烟台'
+            }
+          ],
+          'provinceId': '37',
+          'provinceName': '山东省',
+          'provinceShortName': '山东'
+        },
+        {
+          'dangerAreas': [
+            {
+              'areaName': '二七区福华街街道铁道京广家园',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '二七区嵩山路街道望江居社区',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '二七区长江路街道',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '管城回族区航海东路街道金盾未来花园',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '管城回族区航海东路街道芦邢庄花苑',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '管城回族区陇海马路街道海棠湾',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '管城区航海东路街道正商蓝钻',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '惠济区迎宾路街道西黄刘村',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '经开区明湖办事处第二大街教学研究室家属院',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '金水区东风路街道豫馨苑',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '金水区丰庆路街道普罗旺世',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '金水区丰庆路街道中鼎花园',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '金水区南阳新村街道开元小区',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '金水区未来路街道沈庄新城南区',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '金水区未来路街道燕庄广场郑州地铁 6 号线施工工地',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '新密市白寨镇三岔口村',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '新郑教育园区小乔社区吉祥公寓',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '新郑教育园区正商瑞钻',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '新郑市孟庄镇洪府村',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '新郑市孟庄镇鸡王社区',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '荥阳市京城路街道万业金城小区',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '荥阳市贾峪镇周垌村',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '荥阳市乔楼镇狮村社区',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '郑州新郑教育园区温莎城堡',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '郑州新郑教育园区永泽・上公馆',
+              'cityName': '郑州'
+            },
+            {
+              'areaName': '城乡一体化示范区周庄社区',
+              'cityName': '商丘'
+            },
+            {
+              'areaName': '梁园区大商新玛特（商丘市梁园区凯旋东街与神火大道交叉口东南150米）',
+              'cityName': '商丘'
+            },
+            {
+              'areaName': '梁园区金桂苑小区（青年路与健康路西北角）',
+              'cityName': '商丘'
+            },
+            {
+              'areaName': '睢阳区世纪花园小区（金世纪广场西侧）',
+              'cityName': '商丘'
+            },
+            {
+              'areaName': '灈阳街道金山社区滨河小区A1区',
+              'cityName': '驻马店'
+            },
+            {
+              'areaName': '遂平县濯阳街道魏家胡同三巷以南、小魏庄中心路以东、魏家胡同五巷以北、金山路南段以西合围区域',
+              'cityName': '驻马店'
+            },
+            {
+              'areaName': '西平县柏城街道办事处东关社区新洪路一巷',
+              'cityName': '驻马店'
+            },
+            {
+              'areaName': '尉氏县庄头镇前曹村',
+              'cityName': '开封'
+            }
+          ],
+          'provinceId': '41',
+          'provinceName': '河南省',
+          'provinceShortName': '河南'
+        },
+        {
+          'dangerAreas': [
+            {
+              'areaName': '沙市区崇文街道',
+              'cityName': '荆州'
+            },
+            {
+              'areaName': '沙市区塔桥路以东、江津中路以北、工农路以西、东岳东路以南围合区（沙市区政府和荆州理工职业学院除外）',
+              'cityName': '荆州'
+            },
+            {
+              'areaName': '红安县永佳河镇',
+              'cityName': '黄冈'
+            },
+            {
+              'areaName': '掇刀区兴隆街道',
+              'cityName': '荆门'
+            },
+            {
+              'areaName': '经开区沌口街道',
+              'cityName': '武汉'
+            }
+          ],
+          'provinceId': '42',
+          'provinceName': '湖北省',
+          'provinceShortName': '湖北'
+        },
+        {
+          'dangerAreas': [
+            {
+              'areaName': '武陵源区军地坪街道',
+              'cityName': '张家界'
+            },
+            {
+              'areaName': '永定区崇文街道',
+              'cityName': '张家界'
+            },
+            {
+              'areaName': '永定区大庸桥街道',
+              'cityName': '张家界'
+            },
+            {
+              'areaName': '永定区枫香岗街道',
+              'cityName': '张家界'
+            },
+            {
+              'areaName': '永定区官黎坪街道',
+              'cityName': '张家界'
+            },
+            {
+              'areaName': '永定区后坪街道',
+              'cityName': '张家界'
+            },
+            {
+              'areaName': '永定区南庄坪街道',
+              'cityName': '张家界'
+            },
+            {
+              'areaName': '永定区沙堤街道',
+              'cityName': '张家界'
+            },
+            {
+              'areaName': '永定区西溪坪街道',
+              'cityName': '张家界'
+            },
+            {
+              'areaName': '永定区永定街道',
+              'cityName': '张家界'
+            },
+            {
+              'areaName': '永定区阳湖坪街道',
+              'cityName': '张家界'
+            },
+            {
+              'areaName': '大丰安置房',
+              'cityName': '株洲'
+            },
+            {
+              'areaName': '荷塘区桂花街道阳光里社区东部美的城23栋',
+              'cityName': '株洲'
+            },
+            {
+              'areaName': '锦绣香江小区',
+              'cityName': '株洲'
+            },
+            {
+              'areaName': '石峰区翰林府1期和3期',
+              'cityName': '株洲'
+            },
+            {
+              'areaName': '石峰区时代路时代雅园8栋',
+              'cityName': '株洲'
+            },
+            {
+              'areaName': '学府港湾小区',
+              'cityName': '株洲'
+            },
+            {
+              'areaName': '云龙示范区学林街道学府华庭小区',
+              'cityName': '株洲'
+            },
+            {
+              'areaName': '宁乡市城郊街道未来方舟小区2号栋',
+              'cityName': '长沙'
+            },
+            {
+              'areaName': '宁乡市城郊街道馨宁新村小区',
+              'cityName': '长沙'
+            },
+            {
+              'areaName': '天心区赤岭路街道乾城嘉园',
+              'cityName': '长沙'
+            },
+            {
+              'areaName': '古丈县默戎镇墨戎苗寨',
+              'cityName': '湘西自治州'
+            },
+            {
+              'areaName': '吉首市峒河街道办事处五里牌社区公租房小区',
+              'cityName': '湘西自治州'
+            },
+            {
+              'areaName': '赫山区赫山街道铂金汉宫小区二栋、七栋',
+              'cityName': '益阳'
+            },
+            {
+              'areaName': '雨湖区云塘街道杨家湾公安小区',
+              'cityName': '湘潭'
+            }
+          ],
+          'provinceId': '43',
+          'provinceName': '湖南省',
+          'provinceShortName': '湖南'
+        },
+        {
+          'dangerAreas': [
+            {
+              'areaName': '高新区云龙产业园（具体范围为海榆东线以西、休闲步道以东、横四路以北、横六路以南）',
+              'cityName': '海口'
+            },
+            {
+              'areaName': '龙华区南宝花园小区',
+              'cityName': '海口'
+            },
+            {
+              'areaName': '琼山区云龙镇',
+              'cityName': '海口'
+            }
+          ],
+          'provinceId': '46',
+          'provinceName': '海南省',
+          'provinceShortName': '海南'
+        },
+        {
+          'dangerAreas': [
+            {
+              'areaName': '高新区石羊街道都城雅颂居',
+              'cityName': '成都'
+            },
+            {
+              'areaName': '高新区石羊街道美洲花园68栋',
+              'cityName': '成都'
+            },
+            {
+              'areaName': '青羊区光华街道优品道曦岸',
+              'cityName': '成都'
+            },
+            {
+              'areaName': '南溪区南溪街道江景郦城小区1栋',
+              'cityName': '宜宾'
+            },
+            {
+              'areaName': '江阳区黄舣镇裕兴路4号厂区办公宿舍楼',
+              'cityName': '泸州'
+            }
+          ],
+          'provinceId': '51',
+          'provinceName': '四川省',
+          'provinceShortName': '四川'
+        },
+        {
+          'dangerAreas': [
+            {
+              'areaName': '陇川县章凤镇迭撒村拉影村民小组',
+              'cityName': '德宏州'
+            },
+            {
+              'areaName': '瑞丽市勐卯镇勐龙沙社区南片区（东至团结大沟、南至瑞宏路、西至瑞柠路、北至瑞章路）',
+              'cityName': '德宏州'
+            },
+            {
+              'areaName': '瑞丽市勐卯镇团结村委会弄喊二和金坎片区',
+              'cityName': '德宏州'
+            },
+            {
+              'areaName': '瑞丽市勐卯镇团结村委会弄喊一和东南亚商住城片区',
+              'cityName': '德宏州'
+            }
+          ],
+          'provinceId': '53',
+          'provinceName': '云南省',
+          'provinceShortName': '云南'
+        }
+      ]
+    }
+  ]
+}

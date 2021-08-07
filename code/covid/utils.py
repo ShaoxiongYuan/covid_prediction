@@ -3,11 +3,33 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-id_map = {'Beijing': '110000', 'Tianjin': '120000'}
+id_map = {'Beijing': '110000', 'Tianjin': '120000', 'Hebei': '130000',
+          'Shanxi': '140000', 'Inner Mongolia': '150000', 'Liaoning': '210000',
+          'Jilin': '220000', 'Heilongjiang': '230000', 'Shanghai': '310000',
+          'Jiangsu': '320000', 'Zhejiang': '330000', 'Anhui': '340000',
+          'Fujian': '350000', 'Jiangxi': '360000', 'Shandong': '370000',
+          'Henan': '410000', 'Hubei': '420000', 'Hunan': '430000',
+          'Guangdong': '440000', 'Guangxi': '450000', 'Hainan': '460000',
+          'Chongqing': '500000', 'Sichuan': '510000', 'Guizhou': '520000',
+          'Yunnan': '530000', 'Tibet': '540000', 'Shaanxi': '610000',
+          'Gansu': '620000', 'Qinghai': '630000', 'Ningxia': '640000',
+          'Xinjiang': '650000'}
+
+risk_map = {'Beijing': 0}
+
+translation_map = {'北京': 'Beijing'}
 
 
 def province_covid_num(prov):
-    pass
+    url = 'https://master-covid-19-api-laeyoung.endpoint.ainize.ai/jhu-edu/timeseries?iso2=CN'
+    content = requests.get(url).json()
+
+    for item in content:
+        if item['provincestate'] == prov:
+            confirmed = item['timeseries']['8/4/21']['confirmed']
+            deaths = item['timeseries']['8/4/21']['deaths']
+            recovered = item['timeseries']['8/4/21']['recovered']
+            return confirmed - deaths - recovered, recovered
 
 
 def province_population(prov):
@@ -35,17 +57,23 @@ def province_population(prov):
     response = requests.get(url, headers=headers, params=keyvalue, verify=False)
     data = response.json()
     pop_2020 = data['returndata']['datanodes'][0]['data']['data']
-    print(pop_2020)
+    return pop_2020
 
 
-# 疫情数据
-# content = requests.get(
-#     'https://master-covid-19-api-laeyoung.endpoint.ainize.ai/jhu-edu/timeseries?iso2=CN').json()
-#
-# for item in content:
-#     print(item['provincestate'])
-#
-#
-#
+def get_risk_map():
+    url = 'https://file1.dxycdn.com/2021/0202/196/1680100273140422643-135.json'
+    content = requests.get(url).json()
+    for area in content['data'][1]['dangerPros']:
+        name = area['provinceShortName']
+        risk_map[translation_map[name]] = 1
 
-province_population('Beijing')
+    for area in content['data'][0]['dangerPros']:
+        name = area['provinceShortName']
+        risk_map[translation_map[name]] = 2
+
+
+def province_risk(prov):
+    return risk_map[prov]
+
+
+province_risk('')

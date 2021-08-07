@@ -5,9 +5,15 @@ import math
 
 
 class SEIR():
-    def __init__(self, N_i, I_i, R_i, S_qi, E_qi, T_i, risk, contact_rate):
+    # risk rank of c
+    risk_rank1 = {"low": 1, "mid": 0.75, "high": 0.5}
+    # risk rank of rou
+    risk_rank2 = {"low": 1, "mid": 0.5, "high": 0.01}
+    # risk rank of q
+    risk_rank3 = {"low": 1, "mid": 0.9, "high": 0.8}
+
+    def __init__(self, N_i, I_i, R_i, E_qi, T_i, risk):
         # 基础数据：需要扒取
-        # I_0为感染者的初始人数 524*1.5
         self.I_0 = I_i
         # E_0为潜伏者的初始人数
         self.E_0 = self.I_0
@@ -15,9 +21,8 @@ class SEIR():
         self.R_0 = R_i
         # S_0为易感者的初始人数
         self.S_0 = N_i - self.I_0 - self.E_0 - self.R_0
-        # S_0=21536000
         # Sq 隔离易感染者
-        self.S_q = S_qi
+        self.S_q = self.S_0 /10 *10
         # Eq隔离潜伏者
         self.E_q = E_qi
         # H住院患者
@@ -25,9 +30,11 @@ class SEIR():
         # T为传播时间/周期（可以更改/配置）
         self.T = T_i
         # c 接触率（低时c最大，高时c最小）也可以考虑人口密度等
-        self.c = risk
-        # ρ有效接触系数（低时无系数或系数为1，高时系数<0）
-        self.rou = contact_rate
+        self.c = self.risk_rank1[risk]
+        # ρ有效接触系数（低时无系数或系数为1，高
+        self.rou = self.risk_rank2[risk]
+        # q 隔离比例
+        self.q = 9 * math.pow(10, -6) * self.risk_rank3[risk]
         self.T_range = np.arange(0, self.T + 1)
         self.INI = (self.S_0, self.E_0, self.I_0, self.R_0, self.S_q, self.E_q, self.H)
 
@@ -49,8 +56,6 @@ class SEIR():
         gamma_H = 0.043
         # β 传染概率
         beta = 3.3 * math.pow(10, -9)
-        # q 隔离比例
-        q = 59 * math.pow(10, -6)
         # λ隔离解除速率
         lamada = 1 / 14
 
@@ -82,7 +87,7 @@ class SEIR():
 
 
 if __name__ == '__main__':
-    X = SEIR(21536000, 22, 4, 100, 200, 60, 0.5, 0.1)
+    X = SEIR(21536000, 22, 4, 100, 200, 60, risk='mid')
     # INI为初始状态下的数组
     pred = X.predict()
 
