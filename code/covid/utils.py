@@ -3,17 +3,40 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
+id_map = {'Beijing': '110000', 'Tianjin': '120000'}
+
 
 def province_covid_num(prov):
     pass
 
 
 def province_population(prov):
-    pass
+    headers = {}
+    # 用来传递参数
+    keyvalue = {}
+    # 目标网址
+    url = 'http://data.stats.gov.cn/easyquery.htm'
+    # 头部填充
+    headers['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ' \
+                            'AppleWebKit/537.36 (KHTML, like Gecko)' \
+                            'Chrome/70.0.3538.102 Safari/537.36'
 
+    # 参数填充
+    keyvalue['m'] = 'QueryData'
+    keyvalue['dbcode'] = 'fsnd'
+    keyvalue['rowcode'] = 'zb'
+    keyvalue['colcode'] = 'sj'
+    keyvalue['wds'] = '[]'
+    id = id_map[prov]
+    keyvalue['dfwds'] = '[{"wdcode":"zb","valuecode":"A0301"}, ' \
+                        '{valuecode: ' + id + ', wdcode: "reg"}, ' \
+                                              '{valuecode: "2020", wdcode: "sj"}]'
 
-def predict(population, infected, exposed, removed, quarantine_num, lurk_num):
-    pass
+    response = requests.get(url, headers=headers, params=keyvalue, verify=False)
+    data = response.json()
+    pop_2020 = data['returndata']['datanodes'][0]['data']['data']
+    print(pop_2020)
+
 
 # 疫情数据
 # content = requests.get(
@@ -24,29 +47,5 @@ def predict(population, infected, exposed, removed, quarantine_num, lurk_num):
 #
 #
 #
-# # 人口数据
-# # 用来定义头部
-# headers = {}
-# # 用来传递参数
-# keyvalue = {}
-# # 目标网址
-# url = 'http://data.stats.gov.cn/easyquery.htm'
-# # 头部填充
-# headers['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ' \
-#                         'AppleWebKit/537.36 (KHTML, like Gecko)' \
-#                         'Chrome/70.0.3538.102 Safari/537.36'
-#
-# # 参数填充
-# keyvalue['m'] = 'QueryData'
-# keyvalue['dbcode'] = 'fsnd'
-# keyvalue['rowcode'] = 'zb'
-# keyvalue['colcode'] = 'sj'
-# keyvalue['wds'] = '[]'
-# keyvalue['dfwds'] = '[{"wdcode":"zb","valuecode":"A0301"}, ' \
-#                     '{valuecode: "110000", wdcode: "reg"}, ' \
-#                     '{valuecode: "2020", wdcode: "sj"}]'
-#
-# response = requests.get(url, headers=headers, params=keyvalue, verify=False)
-# data = response.json()
-# pop_2020 = data['returndata']['datanodes'][0]['data']['data']
-# print(pop_2020)
+
+province_population('Beijing')
