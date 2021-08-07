@@ -79,13 +79,7 @@ RES = spi.odeint(funcSEIR,INI,T_range)
 
 #显示中文
 plt.rcParams['font.sans-serif']=['SimHei']
-# plt.plot(RES[:,0],color = 'darkblue',label = 'Susceptible',marker = '.')
-# plt.plot(RES[:,1],color = 'orange',label = 'Exposed',marker = '.')
 plt.plot(RES[:,2],color = 'red',label = '模拟感染人数',marker = '.')
-# plt.plot(RES[:,3],color = 'green',label = 'S_q',marker = '.')
-# plt.plot(RES[:,4],color = 'blue',label = 'E_q',marker = '.')
-# plt.plot(RES[:,5],color = 'black',label = 'H',marker = '.')
-# plt.plot(RES[:,6],color = 'darkgreen',label = 'Recovery',marker = '.')
 
 
 
