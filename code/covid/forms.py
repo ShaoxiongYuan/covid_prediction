@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField,
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from covid.models import User
 
@@ -31,3 +31,10 @@ class LoginForm(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()])
     remember = BooleanField('Remember Me')
     submit = SubmitField('Login')
+
+class RouteForm(FlaskForm):
+    email = StringField('Time',
+                        validators=[DataRequired(),DateTime()])
+    password = PasswordField('Location', validators=[DataRequired()])
+    remember = BooleanField('Remember Me')
+    submit = SubmitField('submit')

@@ -24,6 +24,8 @@ posts = [
 @app.route("/")
 @app.route("/home")
 def home():
+    if not current_user.is_authenticated:
+        return redirect(url_for('login'))
     return render_template('home.html', posts=posts)
 
 
