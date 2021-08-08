@@ -3,8 +3,8 @@ from covid import app, db, bcrypt
 from covid.forms import RegistrationForm, LoginForm, ScheduleForm
 from covid.models import User
 from flask_login import login_user, current_user, logout_user, login_required
-from utils import *
-from SEIRmodel.refine_SEIR import SEIR
+from .utils import *
+from .SEIRmodel.refine_SEIR import SEIR
 import datetime
 
 
@@ -15,19 +15,20 @@ def home():
         return redirect(url_for('login'))
     form = ScheduleForm()
     if form.validate_on_submit():
-
-        time = form.time.data
+        date = form.time.data
         location = form.location.data
-
         covid_num, recovered = province_covid_num(location)
         population = province_population(location)
-        model = SEIR(population, covid_num, recovered, covid_num, time, risks)
+
+        present_date = datetime.date.fromisoformat('2021-08-04')
+        duration = date - present_date
+        model = SEIR(population, covid_num, recovered, covid_num, duration.days, province_risk(location))
         result = model.predict()
-        numOfDays = date - presentDate
-        if result[numOfDnumOfDays > 0 && result[numOfDays] - result > 5
-
-        warnings.append("Your trip to " + event[locationIndex] + " on " + date + "may be dangerous")
-
+        num_of_days = int(duration.total_seconds() / 86400)
+        if result[num_of_days] > 100 or (num_of_days > 0 and result[num_of_days] - result[num_of_days - 1] > 10):
+            flash("Your trip to " + location + " on " + str(date) + " may be dangerous!!!", 'danger')
+        else:
+            flash("Your trip to " + location + " on " + str(date) + " is safe!", 'success')
 
     return render_template('home.html', form=form)
 

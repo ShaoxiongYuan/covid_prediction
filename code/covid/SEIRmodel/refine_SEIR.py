@@ -6,11 +6,11 @@ import math
 
 class SEIR():
     # risk rank of c
-    risk_rank1 = {"low": 1, "mid": 0.75, "high": 0.5}
+    risk_rank1 = {0: 1, 1: 0.75, 2: 0.5}
     # risk rank of rou
-    risk_rank2 = {"low": 1, "mid": 0.5, "high": 0.01}
+    risk_rank2 = {0: 1, 1: 0.5, 2: 0.01}
     # risk rank of q
-    risk_rank3 = {"low": 1, "mid": 0.9, "high": 0.8}
+    risk_rank3 = {0: 1, 1: 0.9, 2: 0.8}
 
     def __init__(self, N_i, I_i, R_i, E_qi, T_i, risk):
         # 基础数据：需要扒取
@@ -62,16 +62,16 @@ class SEIR():
         Y = np.zeros(7)
         X = inivalue
         # S_0
-        Y[0] = -(self.rou * self.c * beta + self.rou * self.c * q * (1 - beta)) \
+        Y[0] = -(self.rou * self.c * beta + self.rou * self.c * self.q * (1 - beta)) \
                * X[0] * (X[2] + cita * X[1]) + lamada * X[4]
         # E_0
-        Y[1] = self.rou * self.c * beta * (1 - q) * X[0] * (X[2] + cita * X[1]) - sigama * X[1]
+        Y[1] = self.rou * self.c * beta * (1 - self.q) * X[0] * (X[2] + cita * X[1]) - sigama * X[1]
         # I_0
         Y[2] = sigama * X[1] - (delta_I + alpha + gamma_I) * X[2]
         # R_0
-        Y[3] = self.rou * self.c * q * (1 - beta) * X[0] * (X[2] + cita * X[1]) - lamada * X[4]
+        Y[3] = self.rou * self.c * self.q * (1 - beta) * X[0] * (X[2] + cita * X[1]) - lamada * X[4]
         # S_q
-        Y[4] = self.rou * self.c * beta * q * X[0] * (X[2] + cita * X[1]) - delta_I * X[4]
+        Y[4] = self.rou * self.c * beta * self.q * X[0] * (X[2] + cita * X[1]) - delta_I * X[4]
         # E_q
         Y[5] = delta_I * X[2] + delta_q * X[5] - (alpha + gamma_H) * X[6]
         # H

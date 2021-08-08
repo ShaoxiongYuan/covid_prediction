@@ -15,9 +15,19 @@ id_map = {'Beijing': '110000', 'Tianjin': '120000', 'Hebei': '130000',
           'Gansu': '620000', 'Qinghai': '630000', 'Ningxia': '640000',
           'Xinjiang': '650000'}
 
-risk_map = {'Beijing': 0}
+risk_map = {}
 
-translation_map = {'北京': 'Beijing'}
+translation_map = {'北京': 'Beijing', '天津': 'Tianjin', '上海': 'Shanghai',
+                   '重庆': 'Chongqing', '河北': 'Hebei', '山西': 'Shanxi',
+                   '辽宁': 'Liaoning', '吉林': 'Jilin', '黑龙江': 'Heilongjiang',
+                   '江苏': 'Jiangsu', '浙江': 'Zhejiang', '安徽': 'Anhui',
+                   '福建': 'Fujian', '江西': 'Jiangxi', '山东': 'Shandong',
+                   '湖北': 'Hubei', '湖南': 'Hunan', '广东': 'Guangdong',
+                   '海南': 'Hainan', '四川': 'Sichuan', '贵州': 'Guizhou',
+                   '云南': 'Yunnan', '陕西': 'Shaanxi', '甘肃': 'Gansu',
+                   '青海': 'Qinghai', '内蒙古': 'Inner Mongolia', '西藏': 'Tibet',
+                   '广西': 'Guangxi', '宁夏': 'Ningxia', '新疆': 'Xinjiang',
+                   '河南': 'Henan'}
 
 
 def province_covid_num(prov):
@@ -73,7 +83,7 @@ def get_risk_map():
 
 
 def province_risk(prov):
-    return risk_map[prov]
-
-
-province_risk('')
+    if prov in risk_map.keys():
+        return risk_map[prov]
+    else:
+        return 0
