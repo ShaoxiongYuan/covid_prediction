@@ -8,9 +8,8 @@ from .SEIRmodel.refine_SEIR import SEIR
 import datetime
 
 
-@app.route("/", methods=['GET', 'POST'])
-@app.route("/home", methods=['GET', 'POST'])
-def home():
+@app.route("/predict", methods=['GET', 'POST'])
+def predict():
     if not current_user.is_authenticated:
         return redirect(url_for('login'))
     form = ScheduleForm()
@@ -30,12 +29,13 @@ def home():
         else:
             flash("Your trip to " + location + " on " + str(date) + " is safe!", 'success')
 
-    return render_template('home.html', form=form)
+    return render_template('predict.html', form=form)
 
 
-@app.route("/about")
-def about():
-    return render_template('about.html', title='About')
+@app.route("/")
+@app.route("/home")
+def home():
+    return render_template('home.html', title='Home')
 
 
 @app.route("/register", methods=['GET', 'POST'])
