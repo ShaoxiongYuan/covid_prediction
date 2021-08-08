@@ -33,11 +33,6 @@ def home():
     return render_template('home.html', form=form)
 
 
-@app.route('/result')
-def result():
-    return render_template('result.html')
-
-
 @app.route("/about")
 def about():
     return render_template('about.html', title='About')
