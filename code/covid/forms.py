@@ -1,42 +1,11 @@
+from flask_login import current_user
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, SelectField
+from flask_wtf.file import FileField, FileAllowed
 from wtforms.fields.html5 import DateField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from covid.models import User
-
-choices = [
-    ('Beijing', 'Beijing'),
-    ('Tianjin', 'Tianjin'),
-    ('Shanghai', 'Shanghai'),
-    ('Chongqing', 'Chongqing'),
-    ('Hebei', 'Hebei'),
-    ('Shanxi', 'Shanxi'),
-    ('Liaoning', 'Liaoning'),
-    ('Jilin', 'Jilin'),
-    ('Heilongjiang', 'Heilongjiang'),
-    ('Jiangsu', 'Jiangsu'),
-    ('Zhejiang', 'Zhejiang'),
-    ('Anhui', 'Anhui'),
-    ('Fujian', 'Fujian'),
-    ('Jiangxi', 'Jiangxi'),
-    ('Shandong', 'Shandong'),
-    ('Henan', 'Henan'),
-    ('Hubei', 'Hubei'),
-    ('Hunan', 'Hunan'),
-    ('Guangdong', 'Guangdong'),
-    ('Hainan', 'Hainan'),
-    ('Sichuan', 'Sichuan'),
-    ('Guizhou', 'Guizhou'),
-    ('Yunnan', 'Yunnan'),
-    ('Shanxi', 'Shanxi'),
-    ('Gansu', 'Gansu'),
-    ('Qinghai', 'Qinghai'),
-    ('Inner Mongolia', 'Inner Mongolia'),
-    ('Guangxi', 'Guangxi'),
-    ('Tibet', 'Tibet'),
-    ('Ningxia', 'Ningxia'),
-    ('Xinjiang', 'Xinjiang')
-]
+from .variables import choices
 
 
 class RegistrationForm(FlaskForm):
@@ -73,3 +42,24 @@ class ScheduleForm(FlaskForm):
     location = SelectField('Location', validators=[DataRequired()],
                            choices=choices)
     submit = SubmitField('submit')
+
+
+class UpdateAccountForm(FlaskForm):
+    username = StringField('Username',
+                           validators=[DataRequired(), Length(min=2, max=20)])
+    email = StringField('Email',
+                        validators=[DataRequired(), Email()])
+    picture = FileField('Update Profile Picture', validators=[FileAllowed(['jpg', 'png'])])
+    submit = SubmitField('Update')
+
+    def validate_username(self, username):
+        if username.data != current_user.username:
+            user = User.query.filter_by(username=username.data).first()
+            if user:
+                raise ValidationError('That username is taken. Please choose a different one.')
+
+    def validate_email(self, email):
+        if email.data != current_user.email:
+            user = User.query.filter_by(email=email.data).first()
+            if user:
+                raise ValidationError('That email is taken. Please choose a different one.')

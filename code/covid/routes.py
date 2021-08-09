@@ -1,9 +1,9 @@
 from flask import render_template, url_for, flash, redirect, request
 from covid import app, db, bcrypt
-from covid.forms import RegistrationForm, LoginForm, ScheduleForm
+from covid.forms import RegistrationForm, LoginForm, ScheduleForm, UpdateAccountForm
 from covid.models import User
 from flask_login import login_user, current_user, logout_user, login_required
-from .utils import *
+from .utils import province_covid_num, province_risk, province_population, save_picture
 from .SEIRmodel.refine_SEIR import SEIR
 import datetime
 
@@ -36,6 +36,11 @@ def predict():
 @app.route("/home")
 def home():
     return render_template('home.html', title='Home')
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 
 @app.route("/register", methods=['GET', 'POST'])
@@ -75,7 +80,22 @@ def logout():
     return redirect(url_for('home'))
 
 
-@app.route("/account")
+@app.route("/account", methods=['GET', 'POST'])
 @login_required
 def account():
-    return render_template('account.html', title='Account')
+    form = UpdateAccountForm()
+    if form.validate_on_submit():
+        if form.picture.data:
+            picture_file = save_picture(form.picture.data)
+            current_user.image_file = picture_file
+        current_user.username = form.username.data
+        current_user.email = form.email.data
+        db.session.commit()
+        flash('Your account has been updated!', 'success')
+        return redirect(url_for('account'))
+    elif request.method == 'GET':
+        form.username.data = current_user.username
+        form.email.data = current_user.email
+    image_file = url_for('static', filename='profile_pics/' + current_user.image_file)
+    return render_template('account.html', title='Account',
+                           image_file=image_file, form=form)
